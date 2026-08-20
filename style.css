@@ -1,0 +1,216 @@
+/* MAT 189 ~ gothic / illuminated-manuscript pass.
+   Palette, type, and ornament are all deliberate choices ~ see comments.
+   Edit freely; this file is yours now. */
+
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=MedievalSharp&family=Cormorant+Garamond:ital,wght@1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap');
+
+:root {
+  /* candlelit crypt, aged vellum ink: near-black plum, aged bone, dried-blood
+     crimson, tarnished brass, illuminated gold */
+  --ink-void:     #0d0a10;
+  --ink-panel:    #16121a;
+  --bone:         #e9e0d2;
+  --bone-dim:     #a89f92;
+  --crimson:      #7a1f2b;
+  --crimson-glow: #b23a49;
+  --brass:        #9c7f42;
+  --gold:         #c9a24b;
+  --hairline:     #332b38;
+}
+
+* { box-sizing: border-box; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .flicker { animation: flicker 6s infinite ease-in-out; }
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 54%, 56%, 100% { opacity: 1; }
+  20%, 22%, 55% { opacity: 0.72; }
+}
+
+html { background: var(--ink-void); }
+
+body {
+  font-family: "IM Fell English", Georgia, "Times New Roman", serif;
+  font-size: 1.12rem;
+  line-height: 1.75;
+  color: var(--bone);
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(122,31,43,0.16), transparent 60%),
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(20,15,24,0.9), transparent 70%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px),
+    var(--ink-void);
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* ---------- header ---------- */
+
+header {
+  margin: 3rem 0 4rem;
+  text-align: center;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px double var(--hairline);
+  position: relative;
+}
+
+header::after {
+  /* small brass sigil beneath the rule, manuscript-colophon style */
+  content: "❦";
+  position: absolute;
+  bottom: -0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink-void);
+  padding: 0 0.6rem;
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-family: "UnifrakturMaguntia", "MedievalSharp", serif;
+  font-weight: 400;
+  font-size: 3.2rem;
+  letter-spacing: 0.01em;
+  color: var(--bone);
+  text-shadow: 0 0 18px rgba(178,58,73,0.35), 0 0 2px rgba(0,0,0,0.8);
+}
+
+header p {
+  color: var(--bone-dim);
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  margin: 0.75rem 0 0;
+}
+
+/* small ornamental rule, reused as a section divider */
+.fleuron {
+  display: block;
+  text-align: center;
+  color: var(--gold);
+  font-family: "MedievalSharp", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.5em;
+  margin: 0 0 0;
+  opacity: 0.9;
+}
+
+/* ---------- projects ---------- */
+
+.project {
+  margin: 0 0 5rem;
+  padding-top: 3rem;
+  position: relative;
+}
+
+.project:first-of-type { padding-top: 0; }
+
+.project::before {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brass), transparent);
+}
+
+.project h2 {
+  margin: 0 0 0.4rem;
+  font-family: "UnifrakturMaguntia", "MedievalSharp", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.1rem;
+  letter-spacing: 0.01em;
+  color: var(--bone);
+}
+
+.project .meta {
+  color: var(--brass);
+  font-family: "IM Fell English SC", serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem;
+}
+
+/* illuminated first letter of each project's closing paragraph, in the
+   style of a manuscript initial ~ gold-on-crimson, hand-set feel */
+.project p:not(.meta):last-of-type::first-letter {
+  font-family: "UnifrakturMaguntia", serif;
+  font-size: 2.6rem;
+  line-height: 1;
+  float: left;
+  padding: 0.1rem 0.35rem 0 0.1rem;
+  margin-top: 0.15rem;
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(201,162,75,0.35);
+}
+
+/* ---------- media ---------- */
+
+figure {
+  margin: 1.75rem 0;
+  padding: 0.6rem;
+  background: var(--ink-panel);
+  border: 1px solid var(--hairline);
+  outline: 1px solid rgba(156,127,66,0.25);
+  outline-offset: 4px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.02) inset, 0 18px 40px -20px rgba(0,0,0,0.9);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.6rem;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+  filter: saturate(0.82) contrast(1.08) sepia(0.12);
+}
+
+.gallery img, .gallery video { width: 100%; height: auto; }
+.gallery video { grid-column: 1 / -1; }
+.gallery video.video-sm { width: 78%; margin: 0 auto; }
+
+figcaption {
+  color: var(--bone-dim);
+  font-family: "IM Fell English", serif;
+  font-style: italic;
+  font-size: 0.97rem;
+  margin-top: 0.6rem;
+  padding: 0 0.2rem;
+}
+
+.project p:not(.meta) {
+  color: var(--bone);
+}
+
+/* ---------- footer ---------- */
+
+footer {
+  margin: 5rem 0 2.5rem;
+  text-align: center;
+  color: var(--bone-dim);
+  font-family: "IM Fell English SC", serif;
+  font-size: 0.92rem;
+  letter-spacing: 0.1em;
+  border-top: 1px double var(--hairline);
+  padding-top: 2rem;
+}
+
+/* ---------- focus visibility, kept legible on dark ground ---------- */
+
+a { color: var(--crimson-glow); }
+:focus-visible {
+  outline: 2px solid var(--crimson-glow);
+  outline-offset: 3px;
+}
