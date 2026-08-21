@@ -189,7 +189,8 @@ img, video {
   filter: saturate(0.82) contrast(1.08) sepia(0.12);
 }
 
-.gallery img, .gallery video { width: 100%; height: auto; }
+.gallery img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
+.gallery video { width: 100%; height: auto; }
 .gallery video { grid-column: 1 / -1; }
 .gallery video.video-sm { width: 78%; margin: 0 auto; }
 
