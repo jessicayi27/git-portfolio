@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMin slice">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="8%" r="65%">
+      <stop offset="0%" stop-color="#3a3440" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#241f2a" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0d0a10" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="1000" fill="url(#glow)"/>
+
+  <!-- suspension rod -->
+  <line x1="60" y1="150" x2="1540" y2="130" stroke="#000" stroke-width="3" opacity="0.55"/>
+
+  <!-- hanging strings -->
+  <g stroke="#000" stroke-width="1.4" opacity="0.5">
+    <line x1="180" y1="150" x2="150" y2="360"/>
+    <line x1="330" y1="148" x2="360" y2="300"/>
+    <line x1="520" y1="145" x2="520" y2="260"/>
+    <line x1="760" y1="142" x2="800" y2="230"/>
+    <line x1="980" y1="138" x2="960" y2="320"/>
+    <line x1="1180" y1="135" x2="1210" y2="270"/>
+    <line x1="1380" y1="132" x2="1350" y2="340"/>
+  </g>
+
+  <!-- dangling beads/round objects -->
+  <g fill="#000" opacity="0.42">
+    <circle cx="150" cy="372" r="14"/>
+    <circle cx="360" cy="312" r="10"/>
+    <circle cx="960" cy="332" r="16"/>
+    <circle cx="1350" cy="352" r="11"/>
+  </g>
+
+  <!-- central skull/mask silhouette -->
+  <g opacity="0.5" fill="#000">
+    <path d="M 720 300
+             Q 700 260 740 230
+             Q 800 195 880 215
+             Q 950 235 960 300
+             Q 965 350 920 385
+             Q 900 400 940 410
+             L 1040 430
+             Q 1000 450 940 445
+             Q 870 460 800 440
+             Q 740 420 720 370
+             Q 710 335 720 300 Z"/>
+    <!-- eye -->
+    <ellipse cx="810" cy="300" rx="16" ry="10" fill="#0d0a10"/>
+    <!-- brim / hat suggestion -->
+    <path d="M 690 350 Q 780 330 900 345 Q 1000 358 1060 400 Q 950 385 820 380 Q 740 378 690 350 Z" opacity="0.85"/>
+  </g>
+
+  <!-- marionette figure, left -->
+  <g stroke="#000" stroke-width="3" fill="none" opacity="0.4" stroke-linecap="round">
+    <line x1="230" y1="360" x2="215" y2="430"/>
+    <circle cx="215" cy="445" r="12" fill="#000" stroke="none"/>
+    <line x1="215" y1="457" x2="190" y2="520"/>
+    <line x1="215" y1="457" x2="245" y2="515"/>
+    <line x1="215" y1="457" x2="175" y2="490"/>
+    <line x1="215" y1="457" x2="260" y2="480"/>
+    <line x1="190" y1="520" x2="180" y2="580"/>
+    <line x1="245" y1="515" x2="255" y2="580"/>
+  </g>
+
+  <!-- marionette figure, right -->
+  <g stroke="#000" stroke-width="3" fill="none" opacity="0.4" stroke-linecap="round">
+    <line x1="1230" y1="360" x2="1245" y2="425"/>
+    <circle cx="1245" cy="440" r="12" fill="#000" stroke="none"/>
+    <line x1="1245" y1="452" x2="1215" y2="510"/>
+    <line x1="1245" y1="452" x2="1280" y2="505"/>
+    <line x1="1245" y1="452" x2="1195" y2="480"/>
+    <line x1="1245" y1="452" x2="1300" y2="470"/>
+    <line x1="1215" y1="510" x2="1205" y2="575"/>
+    <line x1="1280" y1="505" x2="1295" y2="570"/>
+  </g>
+
+  <!-- small dangling stick figure, far right -->
+  <g stroke="#000" stroke-width="2.4" fill="none" opacity="0.35" stroke-linecap="round">
+    <line x1="1440" y1="330" x2="1440" y2="380"/>
+    <circle cx="1440" cy="392" r="9" fill="#000" stroke="none"/>
+    <line x1="1440" y1="401" x2="1420" y2="440"/>
+    <line x1="1440" y1="401" x2="1460" y2="440"/>
+    <line x1="1420" y1="440" x2="1414" y2="480"/>
+    <line x1="1460" y1="440" x2="1468" y2="480"/>
+  </g>
+
+  <!-- faint scratchy sketch lines, upper field -->
+  <g stroke="#000" stroke-width="1" fill="none" opacity="0.22">
+    <path d="M 60 220 Q 90 180 60 140 Q 40 110 70 90"/>
+    <path d="M 1500 240 Q 1470 200 1500 160 Q 1520 130 1490 100"/>
+    <path d="M 470 200 L 470 260 M 460 210 L 480 210"/>
+    <path d="M 1080 190 L 1080 250 M 1070 200 L 1090 200"/>
+  </g>
+</svg>
