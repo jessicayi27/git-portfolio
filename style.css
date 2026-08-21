@@ -5,8 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=MedievalSharp&family=Cormorant+Garamond:ital,wght@1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap');
 
 :root {
-  /* candlelit crypt, aged vellum ink: near-black plum, aged bone, dried-blood
-     crimson, tarnished silver, moonlit steel */
   --ink-void:     #0d0a10;
   --ink-panel:    #16121a;
   --bone:         #e9e0d2;
@@ -97,7 +95,6 @@ header p {
   margin: 0.75rem 0 0;
 }
 
-/* small ornamental rule, reused as a section divider */
 .fleuron {
   display: block;
   text-align: center;
@@ -150,8 +147,6 @@ header p {
   margin: 0 0 1.5rem;
 }
 
-/* illuminated first letter of each project's closing paragraph, in the
-   style of a manuscript initial ~ silver-on-crimson, hand-set feel */
 .project p:not(.meta):last-of-type::first-letter {
   font-family: "UnifrakturMaguntia", serif;
   font-size: 2.6rem;
