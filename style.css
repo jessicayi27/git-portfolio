@@ -29,7 +29,11 @@
   20%, 22%, 55% { opacity: 0.72; }
 }
 
-html { background: var(--ink-void); }
+html {
+  background:
+    url('shadows.svg') no-repeat fixed top center / cover,
+    var(--ink-void);
+}
 
 body {
   font-family: "IM Fell English", Georgia, "Times New Roman", serif;
@@ -39,9 +43,7 @@ body {
   background:
     radial-gradient(ellipse 60% 40% at 50% 0%, rgba(122,31,43,0.16), transparent 60%),
     radial-gradient(ellipse 80% 50% at 50% 100%, rgba(20,15,24,0.9), transparent 70%),
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px),
-    url('shadows.svg') no-repeat fixed top center / cover,
-    var(--ink-void);
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px);
   max-width: 42rem;
   margin: 0 auto;
   padding: 1.5rem;
