@@ -29,10 +29,15 @@
   20%, 22%, 55% { opacity: 0.72; }
 }
 
-html {
-  background:
-    url('shadows.svg') no-repeat fixed top center / cover,
-    var(--ink-void);
+html { background: var(--ink-void); }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url('shadows.svg') no-repeat top center / cover;
 }
 
 body {
