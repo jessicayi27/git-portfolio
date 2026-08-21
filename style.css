@@ -71,7 +71,6 @@ header::after {
   bottom: -0.85rem;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--ink-void);
   padding: 0 0.6rem;
   color: var(--silver);
   font-family: "Noto Sans Egyptian Hieroglyphs", serif;
