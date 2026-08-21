@@ -4,15 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=MedievalSharp&family=Cormorant+Garamond:ital,wght@1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap');
 
-@font-face {
-  font-family: "Marginalia Swash";
-  src: url('MarginaliaSwash2.woff2') format('woff2'),
-       url('MarginaliaSwash2.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   /* candlelit crypt, aged vellum ink: near-black plum, aged bone, dried-blood
      crimson, tarnished silver, moonlit steel */
