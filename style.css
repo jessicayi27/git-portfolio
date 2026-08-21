@@ -2,7 +2,7 @@
    Palette, type, and ornament are all deliberate choices ~ see comments.
    Edit freely; this file is yours now. */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=MedievalSharp&family=Cormorant+Garamond:ital,wght@1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap');
 
 @font-face {
   font-family: "Marginalia Swash";
@@ -49,6 +49,7 @@ body {
     radial-gradient(ellipse 60% 40% at 50% 0%, rgba(122,31,43,0.16), transparent 60%),
     radial-gradient(ellipse 80% 50% at 50% 100%, rgba(20,15,24,0.9), transparent 70%),
     repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px),
+    url('shadows.svg') no-repeat fixed top center / cover,
     var(--ink-void);
   max-width: 42rem;
   margin: 0 auto;
@@ -81,11 +82,12 @@ header::after {
 
 header h1 {
   margin: 0;
-  font-family: "Marginalia Swash", serif;
+  font-family: "UnifrakturMaguntia", "MedievalSharp", serif;
   font-weight: 400;
   font-size: 3.2rem;
   letter-spacing: 0.01em;
   color: var(--bone);
+  -webkit-text-stroke: 0.6px var(--ink-void);
   text-shadow: 0 0 18px rgba(178,58,73,0.35), 0 0 2px rgba(0,0,0,0.8);
 }
 
@@ -103,7 +105,7 @@ header p {
   display: block;
   text-align: center;
   color: var(--silver);
-  font-family: "Marginalia Swash", serif;
+  font-family: "MedievalSharp", serif;
   font-size: 1.05rem;
   letter-spacing: 0.5em;
   margin: 0 0 0;
@@ -133,12 +135,13 @@ header p {
 
 .project h2 {
   margin: 0 0 0.4rem;
-  font-family: "Marginalia Swash", serif;
+  font-family: "UnifrakturMaguntia", "MedievalSharp", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 2.1rem;
   letter-spacing: 0.01em;
   color: var(--bone);
+  -webkit-text-stroke: 0.5px var(--ink-void);
 }
 
 .project .meta {
@@ -153,13 +156,14 @@ header p {
 /* illuminated first letter of each project's closing paragraph, in the
    style of a manuscript initial ~ silver-on-crimson, hand-set feel */
 .project p:not(.meta):last-of-type::first-letter {
-  font-family: "Marginalia Swash", serif;
+  font-family: "UnifrakturMaguntia", serif;
   font-size: 2.6rem;
   line-height: 1;
   float: left;
   padding: 0.1rem 0.35rem 0 0.1rem;
   margin-top: 0.15rem;
   color: var(--silver);
+  -webkit-text-stroke: 0.5px var(--ink-void);
   text-shadow: 0 0 10px rgba(205,210,220,0.35);
 }
 
