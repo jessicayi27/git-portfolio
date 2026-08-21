@@ -5,8 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=MedievalSharp&family=Cormorant+Garamond:ital,wght@1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap');
 
 :root {
-  /* candlelit crypt, aged vellum ink: near-black plum, aged bone, dried-blood
-     crimson, tarnished silver, moonlit steel */
   --ink-void:     #0d0a10;
   --ink-panel:    #16121a;
   --bone:         #e9e0d2;
@@ -65,7 +63,6 @@ header {
 }
 
 header::after {
-  /* small silver sigil beneath the rule, manuscript-colophon style */
   content: "𓀿";
   position: absolute;
   bottom: -0.85rem;
@@ -98,7 +95,6 @@ header p {
   margin: 0.75rem 0 0;
 }
 
-/* small ornamental rule, reused as a section divider */
 .fleuron {
   display: block;
   text-align: center;
@@ -136,94 +132,4 @@ header p {
   font-family: "UnifrakturMaguntia", "MedievalSharp", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.1rem;
-  letter-spacing: 0.01em;
-  color: var(--bone);
-  -webkit-text-stroke: 0.5px var(--ink-void);
-}
-
-.project .meta {
-  color: var(--silver-dim);
-  font-family: "IM Fell English SC", serif;
-  font-size: 0.95rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin: 0 0 1.5rem;
-}
-
-/* illuminated first letter of each project's closing paragraph, in the
-   style of a manuscript initial ~ silver-on-crimson, hand-set feel */
-.project p:not(.meta):last-of-type::first-letter {
-  font-family: "UnifrakturMaguntia", serif;
-  font-size: 2.6rem;
-  line-height: 1;
-  float: left;
-  padding: 0.1rem 0.35rem 0 0.1rem;
-  margin-top: 0.15rem;
-  color: var(--silver);
-  -webkit-text-stroke: 0.5px var(--ink-void);
-  text-shadow: 0 0 10px rgba(205,210,220,0.35);
-}
-
-/* ---------- media ---------- */
-
-figure {
-  margin: 1.75rem 0;
-  padding: 0.6rem;
-  background: var(--ink-panel);
-  border: 1px solid var(--hairline);
-  outline: 1px solid rgba(180,185,196,0.25);
-  outline-offset: 4px;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.02) inset, 0 18px 40px -20px rgba(0,0,0,0.9);
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-  gap: 0.6rem;
-}
-
-img, video {
-  max-width: 100%;
-  display: block;
-  filter: saturate(0.82) contrast(1.08) sepia(0.12);
-}
-
-.gallery img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
-.gallery video { width: 100%; height: auto; }
-.gallery video { grid-column: 1 / -1; }
-.gallery video.video-sm { width: 78%; margin: 0 auto; }
-
-figcaption {
-  color: var(--bone-dim);
-  font-family: "IM Fell English", serif;
-  font-style: italic;
-  font-size: 0.97rem;
-  margin-top: 0.6rem;
-  padding: 0 0.2rem;
-}
-
-.project p:not(.meta) {
-  color: var(--bone);
-}
-
-/* ---------- footer ---------- */
-
-footer {
-  margin: 5rem 0 2.5rem;
-  text-align: center;
-  color: var(--bone-dim);
-  font-family: "IM Fell English SC", serif;
-  font-size: 0.92rem;
-  letter-spacing: 0.1em;
-  border-top: 1px double var(--hairline);
-  padding-top: 2rem;
-}
-
-/* ---------- focus visibility, kept legible on dark ground ---------- */
-
-a { color: var(--crimson-glow); }
-:focus-visible {
-  outline: 2px solid var(--crimson-glow);
-  outline-offset: 3px;
-}
+  font-size:
