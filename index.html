@@ -5,8 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jessica Yi ~ portfolio</title>
   <link rel="stylesheet" href="style.css?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
   <style>
     /* splash-only layout, kept out of style.css so the gallery page is untouched */
+    .splash-inner header h1 {
+      font-family: "Pinyon Script", "UnifrakturMaguntia", cursive;
+      font-weight: 400;
+      font-size: clamp(2.75rem, 12vw, 6.5rem);
+      line-height: 1.1;
+      letter-spacing: 0.01em;
+      -webkit-text-stroke: 0;
+      white-space: nowrap;
+    }
     body.splash {
       min-height: 100vh;
       display: flex;
@@ -22,6 +33,9 @@
       margin: 0;
       padding-bottom: 2.5rem;
     }
+    .splash-inner header p {
+      margin-top: 1.25rem;
+    }
     .enter-hint {
       margin-top: 2.5rem;
       color: var(--silver-dim);
@@ -36,14 +50,30 @@
     }
   </style>
 </head>
-<body class="splash" onclick="location.href='work.html'">
+<body class="splash">
   <div class="splash-inner">
     <header>
       <h1 class="flicker">Welcome to Fantasy</h1>
-      <p>   &amp;  </p>
+      <p>Dark Fairytales  &amp; World Making</p>
     </header>
     <span class="fleuron">✦ ✦ ✦</span>
-    <p class="enter-hint">click to enter</p>
+    <p class="enter-hint">click  to enter</p>
   </div>
+
+  <!-- SWAP: change "theme.mp3" to your audio file's name -->
+  <audio id="bg-music" src="theme.mp3" preload="auto"></audio>
+
+  <script>
+    document.body.addEventListener('click', function () {
+      var audio = document.getElementById('bg-music');
+      // sessionStorage lets work.html know music should already be playing
+      sessionStorage.setItem('musicPlaying', 'true');
+      audio.play().catch(function () {});
+      // small delay so the click registers as the user gesture before navigating
+      setTimeout(function () {
+        location.href = 'work.html';
+      }, 50);
+    });
+  </script>
 </body>
 </html>
