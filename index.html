@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jessica Yi ~ portfolio</title>
+  <link rel="stylesheet" href="style.css?v=2">
+  <style>
+    /* splash-only layout, kept out of style.css so the gallery page is untouched */
+    body.splash {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .splash-inner {
+      text-align: center;
+      padding: 2rem;
+    }
+    .splash-inner header {
+      margin: 0;
+      padding-bottom: 2.5rem;
+    }
+    .enter-hint {
+      margin-top: 2.5rem;
+      color: var(--silver-dim);
+      font-family: "IM Fell English SC", serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .enter-hint { animation: flicker 6s infinite ease-in-out; }
+    }
+  </style>
+</head>
+<body class="splash" onclick="location.href='work.html'">
+  <div class="splash-inner">
+    <header>
+      <h1 class="flicker">Jessica Yi</h1>
+      <p>Maker &amp; Fabricator ~ UC Santa Barbara</p>
+    </header>
+    <span class="fleuron">✦ ✦ ✦</span>
+    <p class="enter-hint">click anywhere to enter</p>
+  </div>
+</body>
+</html>
