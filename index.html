@@ -3,77 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- SWAP: Jessica's name for yours -->
   <title>Jessica Yi ~ portfolio</title>
   <link rel="stylesheet" href="style.css?v=2">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
-  <style>
-    /* splash-only layout, kept out of style.css so the gallery page is untouched */
-    .splash-inner header h1 {
-      font-family: "Pinyon Script", "UnifrakturMaguntia", cursive;
-      font-weight: 400;
-      font-size: clamp(2.75rem, 12vw, 6.5rem);
-      line-height: 1.1;
-      letter-spacing: 0.01em;
-      -webkit-text-stroke: 0;
-      white-space: nowrap;
-    }
-    body.splash {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-    .splash-inner {
-      text-align: center;
-      padding: 2rem;
-    }
-    .splash-inner header {
-      margin: 0;
-      padding-bottom: 2.5rem;
-    }
-    .splash-inner header p {
-      margin-top: 1.25rem;
-    }
-    .enter-hint {
-      margin-top: 2.5rem;
-      color: var(--silver-dim);
-      font-family: "IM Fell English SC", serif;
-      font-size: 0.85rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      opacity: 0.85;
-    }
-    @media (prefers-reduced-motion: no-preference) {
-      .enter-hint { animation: flicker 6s infinite ease-in-out; }
-    }
-  </style>
 </head>
-<body class="splash">
-  <div class="splash-inner">
-    <header>
-      <h1 class="flicker">Welcome to Fantasy</h1>
-      <p>Dark Fairytales  &amp; World Making</p>
-    </header>
+<body>
+<header>
+  <!-- SWAP: your name, your words -->
+  <h1 class="flicker">Jessica Yi</h1>
+  <p>Maker &amp; Fabricator ~ UC Santa Barbara</p>
+</header>
+<main>
+  <section class="project">
     <span class="fleuron">✦ ✦ ✦</span>
-    <p class="enter-hint">click  to enter</p>
-  </div>
+    <h2>Crown</h2>
+    <p class="meta">Photography | 2026 | Scissor</p>
+    <figure>
+      <div class="gallery">
+        <img src="yi_crown_57.jpeg" alt="">
+        <img src="yi_crown_67.jpeg" alt="">
+        <video src="yi_crown_77_compressed.mp4" class="video-sm" controls muted loop></video>
+      </div>
+      <figcaption>Detailed view and close up of The Crown.</figcaption>
+    </figure>
+    <p>
+      A hand-crafted crown constructed from wooden dowels and covered
+      with sewn fabric. The piece explores The Virgin Queen Elizabeth and strength in feminine solitude.
+    </p>
+  </section>
+  <section class="project">
+    <span class="fleuron">✦ ✦ ✦</span>
+    <h2>Crystal</h2>
+    <p class="meta">Fabricated installation | MAT | 2026 | Jess Yi</p>
+    <figure>
+      <div class="gallery">
+        <img src="yi_crystal_20.jpg" alt="">
+        <img src="yi_crystal_21.jpg" alt="">
+        <img src="yi_crystal_22.jpg" alt="zoomed out view of 3d printing crystal 2">
+        <video src="yi_crystal_24.MOV" controls muted loop></video>
+      </div>
+      <figcaption>The Transparent Crystals.</figcaption>
+    </figure>
+    <p>
+These are the crystals I 3D Printed for Media Arts & Design. We displayed our installation, "Crystal Consciousness". A cave that "With the measurement of your human pulse, beats with responding optic fiber lights"
+      Additionally, EEG data was transferred into audio signals as a modulating source within the virtual eurorack and a projection of the body of a nerve cell that moved and changed color with the brain data.
+      With the use of Blender modeling and 3D printing, we hung transparently colored crystals from all around as well as glass pieces acting as sound and light transmitters. My role was in fabrication, 3D modeling and 3D printing.
+    </p>
+  </section>
+  <section class="project">
+    <span class="fleuron">✦ ✦ ✦</span>
+    <h2>Scissor</h2>
+    <p class="meta">Photography &amp; Storytelling | 2026 | Scissor</p>
+    <figure>
+      <div class="gallery">
+        <img src="yi_scissor_01.jpeg" alt="">
+        <img src="yi_scissor_02.jpeg" alt="">
+        <img src="yi_scissor_03.jpeg" alt="">
+        <img src="yi_scissor_04.jpeg" alt="" class="feature">
+      </div>
+      <figcaption>Fertility IS A BLOSSOMING HELL.</figcaption>
+    </figure>
+    <p>
+Designed and fabricated, hand-sewn bonnet on model. A candlelit poetry portrait series exploring intimacy, innocence, and power. Shot in a space lit only by flame, the images focus on a female subject uniting ancient divinity in the eternal earth with a softness that almost misleads you.
+      The warm, low light reflecting in her eye, bewitching a shadow across the collarbone. The series was made by three women.
+    </p>
+  </section>
+</main>
+<footer>
+  <!-- SWAP: your name and email -->
+  <p>Jessica Yi ~ jessicayi@ucsb.edu ~ 2026</p>
+</footer>
 
-  <!-- SWAP: change "theme.mp3" to your audio file's name -->
-  <audio id="bg-music" src="theme.mp3" preload="auto"></audio>
+<!-- SWAP: change "theme.mp3" to match the file used on the splash page -->
+<audio id="bg-music" src="theme.mp3" loop preload="auto"></audio>
 
-  <script>
-    document.body.addEventListener('click', function () {
-      var audio = document.getElementById('bg-music');
-      // sessionStorage lets work.html know music should already be playing
-      sessionStorage.setItem('musicPlaying', 'true');
-      audio.play().catch(function () {});
-      // small delay so the click registers as the user gesture before navigating
-      setTimeout(function () {
-        location.href = 'work.html';
-      }, 50);
-    });
-  </script>
+<script>
+  // if the user arrived via the splash page click, keep the music going
+  if (sessionStorage.getItem('musicPlaying') === 'true') {
+    document.getElementById('bg-music').play().catch(function () {});
+  }
+</script>
 </body>
 </html>
