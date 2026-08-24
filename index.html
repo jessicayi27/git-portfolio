@@ -6,12 +6,27 @@
   <!-- SWAP: Jessica's name for yours -->
   <title>Jessica Yi ~ portfolio</title>
   <link rel="stylesheet" href="style.css?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+  <style>
+    header .tagline {
+      font-family: "Pinyon Script", "Cormorant Garamond", serif;
+      font-style: normal;
+      font-size: clamp(1.25rem, 4.5vw, 1.75rem);
+      color: var(--bone-dim);
+      margin-top: 0.75rem;
+    }
+    .project h2 {
+      font-size: 2.3rem;
+    }
+  </style>
 </head>
 <body>
 <header>
   <!-- SWAP: your name, your words -->
   <h1 class="flicker">Jessica Yi</h1>
   <p>Maker &amp; Fabricator ~ UC Santa Barbara</p>
+  <p class="tagline">.</p>
 </header>
 <main>
   <section class="project">
@@ -22,7 +37,7 @@
       <div class="gallery">
         <img src="yi_crown_57.jpeg" alt="">
         <img src="yi_crown_67.jpeg" alt="">
-        <video src="yi_crown_77_compressed.mp4" class="video-sm" controls muted loop></video>
+        <video src="yi_crown_77_compressed.mp4" poster="yi_crown_77_poster.jpg" class="video-sm" controls muted loop></video>
       </div>
       <figcaption>Detailed view and close up of The Crown.</figcaption>
     </figure>
