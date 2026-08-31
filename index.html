@@ -91,6 +91,13 @@ Designed and fabricated, hand-sewn bonnet on model. A candlelit poetry portrait 
   if (sessionStorage.getItem('musicPlaying') === 'true') {
     document.getElementById('bg-music').play().catch(function () {});
   }
+  // swap cursor to the green angel whenever the mouse button is held down, anywhere on the page
+  document.addEventListener('mousedown', function () {
+    document.body.classList.add('clicking');
+  });
+  document.addEventListener('mouseup', function () {
+    document.body.classList.remove('clicking');
+  });
 </script>
 </body>
 </html>
