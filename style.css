@@ -30,7 +30,11 @@
 html { background: var(--ink-void); }
 
 body {
-  cursor: url('angel-cursor.png') 4 2, auto;
+  cursor: url('angel-cursor.png') 2 1, auto;
+}
+
+body:active {
+  cursor: url('angel-cursor-green.png') 2 1, auto;
 }
 
 body::before {
