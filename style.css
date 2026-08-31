@@ -135,14 +135,13 @@ header p {
   font-size: 2.1rem;
   letter-spacing: 0.01em;
   color: var(--bone);
-  -webkit-text-stroke: 0.5px var(--ink-void);
-  /* glow, made strong enough to actually read against the dark ground */
+  -webkit-text-stroke: 1px var(--ink-void);
+  /* tight glow: crisp letterforms first, soft bloom close behind them */
   text-shadow:
-    0 0 4px #fff,
-    0 0 12px var(--bone),
-    0 0 24px var(--crimson-glow),
-    0 0 46px var(--crimson-glow),
-    0 0 70px var(--crimson);
+    0 0 2px #fff,
+    0 0 6px var(--bone),
+    0 0 14px var(--crimson-glow),
+    0 0 26px var(--crimson-glow);
 }
 
 .project .meta {
