@@ -2,7 +2,7 @@
    Palette, type, and ornament are all deliberate choices ~ see comments.
    Edit freely; this file is yours now. */
 
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=MedievalSharp&family=Cormorant+Garamond:ital,wght@1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=UnifrakturCook:wght@700&family=MedievalSharp&family=Cormorant+Garamond:ital,wght@1,500&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap');
 
 :root {
   --ink-void:     #0d0a10;
@@ -129,19 +129,25 @@ header p {
 
 .project h2 {
   margin: 0 0 0.4rem;
-  font-family: "UnifrakturMaguntia", "MedievalSharp", serif;
-  font-weight: 400;
+  font-family: "UnifrakturCook", "UnifrakturMaguntia", "MedievalSharp", serif;
+  font-weight: 700;
   font-style: normal;
   font-size: 2.1rem;
   letter-spacing: 0.01em;
   color: var(--bone);
   -webkit-text-stroke: 1.75px var(--ink-void);
   paint-order: stroke fill;
-  /* tight glow: bold black outline keeps letters crisp, glow sits just outside it */
+  text-transform: lowercase;
+  /* bold black outline for readability, glow kept subtle and close */
   text-shadow:
-    0 0 2px var(--bone),
-    0 0 8px var(--crimson-glow),
-    0 0 18px var(--crimson-glow);
+    0 0 2px #fff,
+    0 0 6px rgba(255, 255, 255, 0.7);
+}
+
+.project h2::first-letter {
+  /* blackletter capitals (esp. S) are hard to read, so keep it
+     lowercase but scaled up like a small drop cap instead */
+  font-size: 1.3em;
 }
 
 .project .meta {
