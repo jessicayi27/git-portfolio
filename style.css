@@ -29,6 +29,10 @@
 
 html { background: var(--ink-void); }
 
+body {
+  cursor: url('angel-cursor.png') 4 2, auto;
+}
+
 body::before {
   content: "";
   position: fixed;
