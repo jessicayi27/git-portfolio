@@ -135,13 +135,13 @@ header p {
   font-size: 2.1rem;
   letter-spacing: 0.01em;
   color: var(--bone);
-  -webkit-text-stroke: 1px var(--ink-void);
-  /* tight glow: crisp letterforms first, soft bloom close behind them */
+  -webkit-text-stroke: 1.75px var(--ink-void);
+  paint-order: stroke fill;
+  /* tight glow: bold black outline keeps letters crisp, glow sits just outside it */
   text-shadow:
-    0 0 2px #fff,
-    0 0 6px var(--bone),
-    0 0 14px var(--crimson-glow),
-    0 0 26px var(--crimson-glow);
+    0 0 2px var(--bone),
+    0 0 8px var(--crimson-glow),
+    0 0 18px var(--crimson-glow);
 }
 
 .project .meta {
