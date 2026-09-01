@@ -27,6 +27,36 @@
   20%, 22%, 55% { opacity: 0.72; }
 }
 
+/* fluorescent-tube / glitch flicker for project titles ~ sharper,
+   less regular dips than the header's slow candle flicker */
+@media (prefers-reduced-motion: no-preference) {
+  .project h2.flicker {
+    animation: glitch-flicker 5.5s infinite steps(1, end);
+  }
+  .project h2.flicker-2 { animation-delay: 1.3s; animation-duration: 6.2s; }
+  .project h2.flicker-3 { animation-delay: 2.7s; animation-duration: 4.8s; }
+}
+
+@keyframes glitch-flicker {
+  0%   { opacity: 1; }
+  2%   { opacity: 0.25; }
+  4%   { opacity: 1; }
+  6%   { opacity: 0.15; }
+  8%   { opacity: 1; }
+  9%   { opacity: 1; }
+  10%  { opacity: 0.6; }
+  11%  { opacity: 1; }
+  40%  { opacity: 1; }
+  41%  { opacity: 0.2; }
+  42%  { opacity: 1; }
+  70%  { opacity: 1; }
+  71%  { opacity: 0.4; }
+  72%  { opacity: 1; }
+  73%  { opacity: 0.1; }
+  74%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
 html { background: var(--ink-void); }
 
 body {
