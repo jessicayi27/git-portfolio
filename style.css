@@ -172,7 +172,7 @@ header p {
   font-style: normal;
   font-size: 2.4rem;
   letter-spacing: 0.04em;
-  color: var(--bone);
+  color: #e0c3ab;
   -webkit-text-stroke: 2px var(--ink-void);
   paint-order: stroke fill;
   text-transform: lowercase;
@@ -260,13 +260,13 @@ figcaption {
 }
 
 .project p:not(.meta) {
-  color: var(--bone);
+  color: #e0c3ab;
 }
 
 /* ---------- scissor section ~ nude + duotone glow + hand-cut puppets ---------- */
 
 .scissor-section {
-  color: #cfa583;
+  color: #e0c3ab;
   position: relative;
   /* duotone warm wash: crimson bleeding into amber, fading to dark at the edges */
   background:
@@ -281,15 +281,15 @@ figcaption {
 }
 
 .scissor-section h2 {
-  color: #cfa583;
+  color: #e0c3ab;
 }
 
 .scissor-section .meta {
-  color: #b58f6f;
+  color: #cba888;
 }
 
 .scissor-section p:not(.meta) {
-  color: #cfa583;
+  color: #e0c3ab;
 }
 
 .scissor-section::after {
