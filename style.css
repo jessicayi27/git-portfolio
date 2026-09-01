@@ -263,6 +263,62 @@ figcaption {
   color: var(--bone);
 }
 
+/* ---------- scissor section ~ nude + duotone glow + hand-cut puppets ---------- */
+
+.scissor-section {
+  color: #cfa583;
+  position: relative;
+  /* duotone warm wash: crimson bleeding into amber, fading to dark at the edges */
+  background:
+    radial-gradient(ellipse 60% 90% at 15% 40%, rgba(122,31,43,0.4) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 90% at 85% 55%, rgba(201,140,58,0.32) 0%, transparent 65%),
+    radial-gradient(ellipse 90% 100% at 50% 50%, transparent 0%, transparent 40%, var(--ink-void) 88%);
+}
+
+.scissor-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.scissor-section h2 {
+  color: #cfa583;
+}
+
+.scissor-section .meta {
+  color: #b58f6f;
+}
+
+.scissor-section p:not(.meta) {
+  color: #cfa583;
+}
+
+.scissor-section::after {
+  content: "";
+  position: absolute;
+  top: -3rem;
+  left: -1rem;
+  right: -1rem;
+  bottom: -7rem;
+  z-index: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-image:
+    /* hand-cut puppet A ~ irregular blob head, wobbly tapered limbs */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 170'%3E%3Cline x1='34' y1='0' x2='46' y2='18' stroke='%23000' stroke-width='0.6' opacity='0.5'/%3E%3Cline x1='64' y1='0' x2='52' y2='18' stroke='%23000' stroke-width='0.6' opacity='0.5'/%3E%3Cpath fill='%23000' d='M46 6 C41 4 36 9 37 15 C33 17 32 24 37 27 C35 32 39 37 45 35 C44 41 49 44 54 41 C59 44 63 39 60 34 C65 33 66 26 61 23 C64 18 60 12 54 14 C55 8 51 4 46 6 Z'/%3E%3Cpath fill='%23000' d='M40 40 C36 46 42 52 47 50 C46 58 44 68 48 78 C43 86 40 96 44 106 C39 116 36 128 41 138 C46 135 47 126 45 118 C50 110 52 100 48 90 C53 84 55 74 51 65 C56 60 57 52 52 47 C57 45 57 39 51 38 C53 33 47 30 43 34 C46 37 43 42 40 40 Z'/%3E%3Cpath fill='%23000' d='M46 48 C36 44 24 40 16 30 C14 34 15 39 19 42 C29 50 38 54 45 56 Z'/%3E%3Cpath fill='%23000' d='M50 48 C60 42 70 36 76 26 C79 30 78 36 74 40 C65 48 56 53 49 55 Z'/%3E%3C/svg%3E"),
+    /* hand-cut puppet B ~ asymmetric torso, curved kicking limbs */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 170'%3E%3Cline x1='30' y1='0' x2='44' y2='16' stroke='%23000' stroke-width='0.6' opacity='0.5'/%3E%3Cline x1='60' y1='0' x2='50' y2='16' stroke='%23000' stroke-width='0.6' opacity='0.5'/%3E%3Cpath fill='%23000' d='M44 4 C39 3 34 8 36 14 C32 15 31 22 36 25 C33 30 38 36 44 33 C43 40 49 43 53 39 C58 41 62 36 58 31 C63 30 63 23 58 21 C61 16 56 11 51 13 C52 7 48 3 44 4 Z'/%3E%3Cpath fill='%23000' d='M38 38 C34 44 40 50 46 47 C44 56 40 66 46 74 C41 82 36 92 42 100 C37 108 34 120 40 128 C45 125 46 116 43 108 C48 100 49 90 45 82 C50 76 51 66 47 58 C52 53 51 45 45 43 C48 39 42 35 38 38 Z'/%3E%3Cpath fill='%23000' d='M42 46 C30 50 18 56 8 66 C11 70 16 71 21 68 C31 61 39 55 46 51 Z'/%3E%3Cpath fill='%23000' d='M46 46 C56 38 68 32 80 30 C80 35 77 39 72 41 C63 45 54 49 48 51 Z'/%3E%3C/svg%3E"),
+    /* hand-cut puppet C ~ small, tucked pose */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 170'%3E%3Cpath fill='%23000' d='M48 8 C43 6 38 11 40 17 C36 19 35 26 40 28 C38 33 43 38 48 35 C48 41 54 43 58 39 C63 40 66 35 62 31 C66 29 66 23 61 21 C63 16 58 11 53 13 C54 8 52 6 48 8 Z'/%3E%3Cpath fill='%23000' d='M43 40 C40 48 44 56 50 54 C50 62 46 72 50 80 C46 88 42 98 47 106 C43 112 41 120 45 126 C50 122 51 112 48 104 C53 98 53 88 49 80 C54 74 54 64 49 58 C54 55 53 47 47 45 C50 41 45 37 43 40 Z'/%3E%3Cpath fill='%23000' d='M46 48 C38 52 30 58 26 66 C29 69 33 69 37 66 C42 61 46 57 49 54 Z'/%3E%3Cpath fill='%23000' d='M52 48 C60 44 68 42 76 44 C76 48 73 51 68 51 C61 51 55 50 51 51 Z'/%3E%3C/svg%3E");
+  background-position:
+    6rem -1.5rem,
+    22rem -1.2rem,
+    32rem 1.5rem;
+  background-size:
+    9.5rem 16rem,
+    8.8rem 15rem,
+    7rem 12rem;
+}
+
 /* ---------- footer ---------- */
 
 footer {
@@ -273,7 +329,44 @@ footer {
   font-size: 0.92rem;
   letter-spacing: 0.1em;
   border-top: 1px double var(--hairline);
-  padding-top: 2rem;
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  position: relative;
+  overflow: visible;
+  /* same duotone warm wash used in the Scissor section, echoed here at the page's end */
+  background:
+    radial-gradient(ellipse 60% 90% at 20% 40%, rgba(122,31,43,0.35) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 90% at 80% 55%, rgba(201,140,58,0.28) 0%, transparent 65%);
+}
+
+footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  right: -1rem;
+  bottom: -1rem;
+  z-index: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-image:
+    /* same hand-cut puppets from the Scissor section, echoed here */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 170'%3E%3Cline x1='34' y1='0' x2='46' y2='18' stroke='%23000' stroke-width='0.6' opacity='0.5'/%3E%3Cline x1='64' y1='0' x2='52' y2='18' stroke='%23000' stroke-width='0.6' opacity='0.5'/%3E%3Cpath fill='%23000' d='M46 6 C41 4 36 9 37 15 C33 17 32 24 37 27 C35 32 39 37 45 35 C44 41 49 44 54 41 C59 44 63 39 60 34 C65 33 66 26 61 23 C64 18 60 12 54 14 C55 8 51 4 46 6 Z'/%3E%3Cpath fill='%23000' d='M40 40 C36 46 42 52 47 50 C46 58 44 68 48 78 C43 86 40 96 44 106 C39 116 36 128 41 138 C46 135 47 126 45 118 C50 110 52 100 48 90 C53 84 55 74 51 65 C56 60 57 52 52 47 C57 45 57 39 51 38 C53 33 47 30 43 34 C46 37 43 42 40 40 Z'/%3E%3Cpath fill='%23000' d='M46 48 C36 44 24 40 16 30 C14 34 15 39 19 42 C29 50 38 54 45 56 Z'/%3E%3Cpath fill='%23000' d='M50 48 C60 42 70 36 76 26 C79 30 78 36 74 40 C65 48 56 53 49 55 Z'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 170'%3E%3Cline x1='30' y1='0' x2='44' y2='16' stroke='%23000' stroke-width='0.6' opacity='0.5'/%3E%3Cline x1='60' y1='0' x2='50' y2='16' stroke='%23000' stroke-width='0.6' opacity='0.5'/%3E%3Cpath fill='%23000' d='M44 4 C39 3 34 8 36 14 C32 15 31 22 36 25 C33 30 38 36 44 33 C43 40 49 43 53 39 C58 41 62 36 58 31 C63 30 63 23 58 21 C61 16 56 11 51 13 C52 7 48 3 44 4 Z'/%3E%3Cpath fill='%23000' d='M38 38 C34 44 40 50 46 47 C44 56 40 66 46 74 C41 82 36 92 42 100 C37 108 34 120 40 128 C45 125 46 116 43 108 C48 100 49 90 45 82 C50 76 51 66 47 58 C52 53 51 45 45 43 C48 39 42 35 38 38 Z'/%3E%3Cpath fill='%23000' d='M42 46 C30 50 18 56 8 66 C11 70 16 71 21 68 C31 61 39 55 46 51 Z'/%3E%3Cpath fill='%23000' d='M46 46 C56 38 68 32 80 30 C80 35 77 39 72 41 C63 45 54 49 48 51 Z'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 170'%3E%3Cpath fill='%23000' d='M48 8 C43 6 38 11 40 17 C36 19 35 26 40 28 C38 33 43 38 48 35 C48 41 54 43 58 39 C63 40 66 35 62 31 C66 29 66 23 61 21 C63 16 58 11 53 13 C54 8 52 6 48 8 Z'/%3E%3Cpath fill='%23000' d='M43 40 C40 48 44 56 50 54 C50 62 46 72 50 80 C46 88 42 98 47 106 C43 112 41 120 45 126 C50 122 51 112 48 104 C53 98 53 88 49 80 C54 74 54 64 49 58 C54 55 53 47 47 45 C50 41 45 37 43 40 Z'/%3E%3Cpath fill='%23000' d='M46 48 C38 52 30 58 26 66 C29 69 33 69 37 66 C42 61 46 57 49 54 Z'/%3E%3Cpath fill='%23000' d='M52 48 C60 44 68 42 76 44 C76 48 73 51 68 51 C61 51 55 50 51 51 Z'/%3E%3C/svg%3E");
+  background-position:
+    4rem 0.5rem,
+    50% -1rem,
+    calc(100% - 5rem) 1rem;
+  background-size:
+    6.5rem 11rem,
+    6rem 10.2rem,
+    5rem 8.5rem;
 }
 
 /* ---------- focus visibility, kept legible on dark ground ---------- */
