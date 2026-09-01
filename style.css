@@ -90,6 +90,13 @@ body {
   padding: 1.5rem;
 }
 
+/* slightly wider layout on desktop/laptop screens only ~ mobile stays as-is */
+@media (min-width: 64rem) {
+  body {
+    max-width: 50rem;
+  }
+}
+
 /* ---------- header ---------- */
 
 header {
