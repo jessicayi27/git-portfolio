@@ -284,11 +284,21 @@ figcaption {
 .scissor-section {
   color: #e0c3ab;
   position: relative;
-  /* duotone warm wash: crimson bleeding into amber, fading to dark at the edges */
+}
+
+.scissor-section::before {
+  /* duotone warm wash: crimson bleeding into amber, fading to black ~
+     oversized + blurred so it feathers out instead of showing a hard box edge */
+  content: "";
+  position: absolute;
+  inset: -6rem;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(3.5rem);
   background:
-    radial-gradient(ellipse 60% 90% at 15% 40%, rgba(122,31,43,0.4) 0%, transparent 65%),
-    radial-gradient(ellipse 60% 90% at 85% 55%, rgba(201,140,58,0.32) 0%, transparent 65%),
-    radial-gradient(ellipse 90% 100% at 50% 50%, transparent 0%, transparent 40%, var(--ink-void) 88%);
+    radial-gradient(ellipse 55% 75% at 20% 40%, rgba(122,31,43,0.28) 0%, rgba(122,31,43,0.12) 40%, transparent 72%),
+    radial-gradient(ellipse 55% 75% at 80% 55%, rgba(201,140,58,0.2) 0%, rgba(201,140,58,0.08) 40%, transparent 72%),
+    radial-gradient(ellipse 80% 90% at 50% 50%, transparent 0%, transparent 35%, rgba(13,10,16,0.9) 80%);
 }
 
 .scissor-section > * {
@@ -349,10 +359,20 @@ footer {
   padding-bottom: 8rem;
   position: relative;
   overflow: visible;
-  /* same duotone warm wash used in the Scissor section, echoed here at the page's end */
+}
+
+footer::after {
+  /* same duotone warm wash used in the Scissor section, echoed here at the page's end ~
+     oversized + blurred so it feathers out instead of showing a hard box edge */
+  content: "";
+  position: absolute;
+  inset: -6rem;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(3.5rem);
   background:
-    radial-gradient(ellipse 60% 90% at 20% 40%, rgba(122,31,43,0.35) 0%, transparent 65%),
-    radial-gradient(ellipse 60% 90% at 80% 55%, rgba(201,140,58,0.28) 0%, transparent 65%);
+    radial-gradient(ellipse 55% 75% at 20% 40%, rgba(122,31,43,0.38) 0%, rgba(122,31,43,0.16) 40%, transparent 72%),
+    radial-gradient(ellipse 55% 75% at 80% 55%, rgba(201,140,58,0.3) 0%, rgba(201,140,58,0.12) 40%, transparent 72%);
 }
 
 footer > * {
