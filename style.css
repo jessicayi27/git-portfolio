@@ -220,7 +220,7 @@ header p {
   margin: 0 0 1.5rem;
 }
 
-.project p:not(.meta):last-of-type::first-letter {
+.project p:not(.meta):first-of-type::first-letter {
   font-family: "UnifrakturMaguntia", serif;
   font-size: 2.6rem;
   line-height: 1;
