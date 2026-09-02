@@ -182,7 +182,7 @@ header p {
   color: #e0c3ab;
   -webkit-text-stroke: 2px var(--ink-void);
   paint-order: stroke fill;
-  text-transform: none; /* FIX: was "lowercase" ~ now keeps real capitalization (e.g. "Crystal Consciousness") */
+  text-transform: lowercase;
   /* no glow: solid black outline for maximum readability
      (text-shadow doubles as outline for browsers that ignore text-stroke) */
   text-shadow:
@@ -197,8 +197,8 @@ header p {
 }
 
 .project h2::first-letter {
-  /* blackletter capitals (esp. S) are hard to read, so this scales
-     the first letter up a bit like a small drop cap for emphasis */
+  /* blackletter capitals (esp. S) are hard to read, so keep it
+     lowercase but scaled up like a small drop cap instead */
   font-size: 1.3em;
 }
 
