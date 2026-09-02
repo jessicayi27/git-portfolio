@@ -182,7 +182,7 @@ header p {
   color: #e0c3ab;
   -webkit-text-stroke: 2px var(--ink-void);
   paint-order: stroke fill;
-  text-transform: lowercase;
+  text-transform: none;
   /* no glow: solid black outline for maximum readability
      (text-shadow doubles as outline for browsers that ignore text-stroke) */
   text-shadow:
