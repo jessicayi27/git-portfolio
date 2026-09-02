@@ -202,6 +202,11 @@ header p {
   font-size: 1.3em;
 }
 
+.project h2.flicker-3 {
+  /* "Scissor" keeps the old lowercase treatment ~ blackletter capital S is hard to read */
+  text-transform: lowercase;
+}
+
 .project .meta {
   color: var(--silver-dim);
   font-family: "IM Fell English SC", serif;
