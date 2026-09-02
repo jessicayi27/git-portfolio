@@ -198,7 +198,7 @@ header p {
 
 .project h2::first-letter {
   /* blackletter capitals (esp. S) are hard to read, so keep it
-     lowercase but scaled up like a small drop cap instead */
+     none but scaled up like a small drop cap instead */
   font-size: 1.3em;
 }
 
