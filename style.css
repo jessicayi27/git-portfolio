@@ -207,6 +207,10 @@ header p {
   text-transform: lowercase;
 }
 
+.project h2.flicker-3::first-letter {
+  font-size: 1.6em;
+}
+
 .project .meta {
   color: var(--silver-dim);
   font-family: "IM Fell English SC", serif;
