@@ -271,6 +271,17 @@ img, video {
   align-items: end;
 }
 
+/* let the Crown gallery's frame break out wider than the normal
+   content column on bigger screens, so the row of three images
+   can render larger while staying in a single row */
+@media (min-width: 64rem) {
+  figure:has(.gallery-crown) {
+    max-width: 62rem;
+    margin-left: calc(50% - 31rem);
+    margin-right: calc(50% - 31rem);
+  }
+}
+
 .gallery-crystal img {
   height: 320px;
   width: 100%;
