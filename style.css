@@ -270,6 +270,12 @@ img, video {
   grid-template-columns: 1.15fr 0.7fr 1.15fr;
 }
 
+.gallery-crystal img {
+  height: 320px;
+  width: 100%;
+  object-fit: cover;
+}
+
 .gallery video { width: 100%; height: auto; }
 .gallery video { grid-column: 1 / -1; }
 .gallery video.video-sm { width: 78%; margin: 0 auto; }
