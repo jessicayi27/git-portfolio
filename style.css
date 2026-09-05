@@ -266,6 +266,10 @@ img, video {
   grid-column: 1 / -1;
 }
 
+.gallery-crown {
+  grid-template-columns: 1.15fr 0.7fr 1.15fr;
+}
+
 .gallery video { width: 100%; height: auto; }
 .gallery video { grid-column: 1 / -1; }
 .gallery video.video-sm { width: 78%; margin: 0 auto; }
