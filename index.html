@@ -135,12 +135,18 @@ Designed and fabricated, hand-sewn bonnet on model. A candlelit poetry portrait 
   var musicToggle = document.getElementById('music-toggle');
   musicToggle.addEventListener('click', function () {
     if (bgMusic.paused) {
-      bgMusic.play().catch(function () {});
-      musicToggle.innerHTML = '&#10074;&#10074; Pause';
+      bgMusic.play().then(function () {
+        musicToggle.innerHTML = '&#10074;&#10074; Pause';
+      }).catch(function (err) {
+        console.error('Audio failed to play:', err.name, err.message);
+      });
     } else {
       bgMusic.pause();
       musicToggle.innerHTML = '&#9658; Play';
     }
+  });
+  bgMusic.addEventListener('error', function () {
+    console.error('Audio element error:', bgMusic.error);
   });
   // swap cursor to the green angel whenever the mouse button is held down, anywhere on the page
   document.addEventListener('mousedown', function () {
