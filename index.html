@@ -24,32 +24,6 @@
       text-align: center;
       margin-top: 0.4rem;
     }
-    #music-toggle {
-      display: block;
-      margin: 1rem auto 0;
-      background: none;
-      border: 1px solid var(--bone-dim, #999);
-      color: var(--bone-dim, #999);
-      font-family: inherit;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.75rem;
-      padding: 0.5rem 1.1rem;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: opacity 0.2s ease;
-    }
-    #music-toggle:hover {
-      opacity: 0.75;
-    }
-    .music-title {
-      text-align: center;
-      font-size: 0.7rem;
-      letter-spacing: 0.04em;
-      color: var(--bone-dim, #999);
-      opacity: 0.7;
-      margin-top: 0.4rem;
-    }
   </style>
 </head>
 <body>
@@ -58,8 +32,6 @@
   <h1 class="flicker">Jessica Yi</h1>
   <p>Maker &amp; Fabricator ~ UC Santa Barbara</p>
   <p class="tagline">.</p>
-  <button id="music-toggle" type="button">&#9658; Play</button>
-  <p class="music-title">Freedom for People &mdash; 2026 Sound Engineering Project</p>
 </header>
 <main>
   <section class="project">
@@ -126,28 +98,14 @@ Designed and fabricated, hand-sewn bonnet on model. A candlelit poetry portrait 
   <p class="social"><a href="https://www.instagram.com/scissor8888/" target="_blank" rel="noopener">@scissor8888</a></p>
 </footer>
 
-<!-- SWAP: change "freedom_for_people.mp3" to match the file used on the splash page -->
-<audio id="bg-music" src="freedom_for_people.mp3" loop preload="auto"></audio>
+<!-- SWAP: change "theme.mp3" to match the file used on the splash page -->
+<audio id="bg-music" src="theme.mp3" loop preload="auto"></audio>
 
 <script>
-  // simple play/pause button for the background track
-  var bgMusic = document.getElementById('bg-music');
-  var musicToggle = document.getElementById('music-toggle');
-  musicToggle.addEventListener('click', function () {
-    if (bgMusic.paused) {
-      bgMusic.play().then(function () {
-        musicToggle.innerHTML = '&#10074;&#10074; Pause';
-      }).catch(function (err) {
-        console.error('Audio failed to play:', err.name, err.message);
-      });
-    } else {
-      bgMusic.pause();
-      musicToggle.innerHTML = '&#9658; Play';
-    }
-  });
-  bgMusic.addEventListener('error', function () {
-    console.error('Audio element error:', bgMusic.error);
-  });
+  // if the user arrived via the splash page click, keep the music going
+  if (sessionStorage.getItem('musicPlaying') === 'true') {
+    document.getElementById('bg-music').play().catch(function () {});
+  }
   // swap cursor to the green angel whenever the mouse button is held down, anywhere on the page
   document.addEventListener('mousedown', function () {
     document.body.classList.add('clicking');
